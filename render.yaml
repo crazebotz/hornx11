@@ -4,7 +4,7 @@ services:
     name: Hornx11
     env: python
     buildCommand: pip install -r requirements.txt
-    startCommand: python main.py
+    startCommand: gunicorn app:app & python3 main.py
     repo: https://github.com/crazebotz/Hornx11.git      
     branch: main
     envVars:
