@@ -20,7 +20,7 @@ xbot = Client(
 )
 
 
-@xbot.on_message(filters.regex(url_ptrn) & filters.private & filters.text)
+@xbot.on_message(filters.incoming & filters.regex(url_ptrn) & filters.private & filters.text)
 async def get_post_info(_, m):
     if "pornx11.com" not in m.text:
         return
